@@ -107,6 +107,7 @@ img {
 #reviews {
     padding: 0 0.75rem 0 0.75rem;
 }
+/** FOOTER **/
 footer {
     clear: both;
 }
@@ -137,6 +138,7 @@ footer span {
     nav ul li {
         display: inline-block;
     }
+    /** FOOTER **/
     footer p {
         font-size: 1rem;
     }
@@ -144,13 +146,14 @@ footer span {
 
 /** DESKTOP (940px) **/
 @media all and (min-width: 940px) {
+    /** BASE **/
+    html {
+        text-align: left;
+    }
     /** GRIDS **/
     .site-title {
         width: auto;
         float: left;
-    }
-    html {
-        text-align: left;
     }
     .third-width, #reviews {
         padding: 1rem;
