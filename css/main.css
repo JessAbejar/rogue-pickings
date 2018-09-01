@@ -8,7 +8,7 @@ html {
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    padding: 0 0.5rem 0 0.5rem;
+    padding: 0.5rem;
 }
 
 /** GRID **/
@@ -19,10 +19,6 @@ body {
 .full-width {
     width: 100%;
     margin: 0 auto;
-}
-.site-title {
-    width: 100%;
-    float: left;
 }
 .third-width {
     width: 100%;
@@ -59,21 +55,46 @@ p {
 }
 
 /** HEADER **/
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 /** SITE TITLE**/
 h1 span {
     color: #77a466;
 }
 /** NAVIGATION MENU**/
 nav {
-    margin: 0 auto;
+    width: 100%;
 }
-nav ul {
-    padding: 0;
+.menu-icon {
+    padding: 0.5rem 0 0.5rem 0;
+    justify-content:center;
+    background-color: #77a446;
+    width: 100%;
+    color: #ffffff;
+    font-size: 1rem;
 }
-nav ul li {
-    display: block;
+.collapsed {
+    display:none;
 }
-nav ul li a {
+.open {
+    display: flex;
+    flex-direction: column;
+}
+.navlink {
+    padding: 0.5rem;
+}
+nav a {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    text-decoration: none;
+    padding: 0 0.5rem;
+}
+nav a {
     font-weight: 700;
     color: #77a466;
     text-transform: uppercase;
@@ -133,10 +154,23 @@ footer span {
         width: 33.3%;
         float: left;
     }
-    /** NAV **/
-    nav ul li {
-        display: inline-block;
+    
+    header {
+        justify-content: space-between;
     }
+    /** NAV **/
+    nav {
+        padding:0;
+        width: auto;
+    }
+    .menu-icon {
+        display:none;
+    }
+    #navbar, .collapsed, .open {
+        display:flex;
+        flex-direction: row;
+    }
+    /** FOOTER **/
     footer p {
         font-size: 1rem;
     }
@@ -145,21 +179,14 @@ footer span {
 /** DESKTOP (940px) **/
 @media all and (min-width: 940px) {
     /** GRIDS **/
-    .site-title {
-        width: auto;
-        float: left;
-    }
     html {
         text-align: left;
     }
     .third-width, #reviews {
         padding: 1rem;
     }
-    /** NAV **/
-    nav {
-        float: right;
-    }
-    nav ul li a {
-        font-size: 1rem;
+    /** HEADER **/
+    header {
+        flex-direction: row;
     }
 }
