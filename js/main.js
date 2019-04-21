@@ -1,4 +1,4 @@
-var menu = document.querySelector('.menu-icon');
+var menu = document.getElementById('menu-icon');
 var navbar = document.getElementById('navbar');
 
 var toggleMenu = function () {
